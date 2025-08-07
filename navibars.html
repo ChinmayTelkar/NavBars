@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bars</title>
+    <style>
+      body {
+        padding: 20px;
+        margin: 0;
+      }
+      .bar1 {
+        background-color: black;
+        color: #fff;
+        font-size: 20px;
+      }
+      .bar1 ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+      }
+      .bar li {
+        display: inline;
+      }
+      .bar1 a {
+        text-decoration: none;
+        color: orange;
+        position: relative;
+      }
+      .bar1 button {
+        color: orange;
+        background-color: #fff;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 2px solid orange;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .bar1 button:hover {
+        background-color: #8e8484;
+      }
+      .bar1 a::after {
+        content: "";
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background-color: orange;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .bar1 a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .bar2 {
+        background-color: rgb(225, 30, 225);
+        width: 300px;
+        padding: 20px;
+      }
+      .bar2 ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .bar2 li {
+        margin-bottom: 10px;
+      }
+      .bar2 a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        position: relative;
+      }
+      .bar2 a:hover {
+        background-color: rgb(172, 30, 172);
+      }
+      .bar2 button {
+        background-color: rgb(171, 20, 171);
+        width: 100%;
+        padding: 15px;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+      }
+      .bar3 {
+        padding: 10px;
+        background-color: turquoise;
+        font-size: 20px;
+      }
+      .bar3 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .bar3 a {
+        text-decoration: none;
+        color: #1a1a1a;
+        padding: 10px;
+        display: block;
+        position: relative;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .bar3 .contents {
+        display: none;
+      }
+      .bar3 .dropdown:hover .contents {
+        display: block;
+        position: absolute;
+        background-color: turquoise;
+      }
+      .bar3 .dropdown .contents a:hover {
+        background-color: #d2cccc;
+      }
+      .bar3 button {
+        font-size: 20px;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      .bar3 button:hover {
+        background-color: #8e8484;
+      }
+      .bar3 a::after {
+        content: " ";
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background-color: #1a1a1a;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .bar3 a:hover::after {
+        transform: scaleX(1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+
+      <div class="nav-container">
+        <h2>Horizontal Variation 1</h2>
+        <nav class="bar1">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <button>Login</button>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="nav-container">
+      <h2>Vertical Variation 2</h2>
+      <nav class="bar2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <button>Login</button>
+        </ul>
+      </nav>
+    </div>
+    <footer>
+      <div class="nav-container">
+        <h2>Variation 3</h2>
+        <nav class="bar3">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#">About</a>
+              <div class="contents">
+                <a href="#">Our Story</a>
+                <a href="#">team</a>
+                <a href="#">Contact</a>
+              </div>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+            <button>Login</button>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
