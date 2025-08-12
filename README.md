@@ -1,1 +1,1 @@
-# Here HTML code of 3 navigation bars styles are there.
+# Here you can find HTML codes of 3 navigation bar styles.
